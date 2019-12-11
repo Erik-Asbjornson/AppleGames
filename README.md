@@ -1,5 +1,5 @@
 # AppleGames
-The game is for Mac
+The game is for MacOSX.
 
 Currently the only goal of the game is do not kill yourself and it is a sandbox game because I ran out of time to add enemies.
 
