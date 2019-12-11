@@ -16,7 +16,7 @@ extension GameScene {
         if name == Break.name {return}
         let token = name.components(separatedBy: ",")
         switch token[0] {
-        case "Grass", "Dirt": drops("Dirt", 127)
+        case "Grass", "Dirt": drops("Dirt")
         case "Stone", "Cobblestone": drops("Cobblestone")
         case "Deadbush": drops("Stick", Int.random(in: 1...2), isBlock: "false")
         case "Leaves":
@@ -24,7 +24,8 @@ extension GameScene {
                 if Bool.random() {drops("Stick", Int.random(in: 0...2), isBlock: "false")
                 } else {drops("Sapling", isBlock: "trans")}
             }
-            if Int.random(in: 1...200) == 1 {drops("Apple", 1, isBlock: "food")}
+            //will be 1...200 in future, but in the demo this is the only source of food
+            if Int.random(in: 1...2) == 1 {drops("Apple", 1, isBlock: "food")}
         default: drops(token[0])
         }
     }
@@ -81,8 +82,6 @@ extension GameScene {
         } else {
             var facing: CGFloat = 60
             var dir = 1
-            print("\(player.texture!)")
-            print("\(SKTexture(imageNamed: "steveLeft"))")
             if player.texture!.description == SKTexture(imageNamed: "steveLeft").description {
                 facing = -facing
                 dir = -1

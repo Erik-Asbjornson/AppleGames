@@ -182,9 +182,13 @@ extension GameScene {
         // Called when an item is dropped/used from the hotbar
         if labels[i] == 0 {return}
         labels[i]-=1
-        if labels[i] == 0{
+        if labels[i] == 0 {
             player.childNode(withName: hotToken[0]+",bar,\(i+1)")!.removeFromParent()
-            hotbar[i] = ""
+            if i < 9 {
+                hotbar[i] = ""
+            } else {
+                inventory[i-9] = ""
+            }
         }
     }
     
@@ -278,6 +282,21 @@ extension GameScene {
             boxPos = player.childNode(withName: "inv,\(token)")!.position
         }
         
+        //check if in inventory if not drop stack of items
+        if abs(loc.x) > 322 || loc.y > -62 || loc.y < -342 {
+            
+            for _ in 1...labels[token] {
+                hotDrop(touched.name!.components(separatedBy: ",").first!)
+                decLabel(touched.name!.components(separatedBy: ","), token)
+            }
+            
+            //set labels position
+            (player.childNode(withName: "label,\(token)") as? SKLabelNode)?.position = CGPoint(x: boxPos.x+32, y: boxPos.y-32)
+            
+            return
+        }
+
+        
         //check if placed in hotbar or inventory
         if Int(touchPos.x+touchPos.y) <= 9 {
             
@@ -302,8 +321,6 @@ extension GameScene {
                 player.childNode(withName: (hotbar[new].components(separatedBy: ",").first ?? "")+",bar,\(new+1)")?.removeFromParent()
                 hotbar[new] = temp
             }
-            
-            (player.childNode(withName: "label,\(token)") as? SKLabelNode)?.position = CGPoint(x: boxPos.x+32, y: boxPos.y-32)
         } else {
             
             let new = 45-Int(touchPos.x+touchPos.y)
@@ -326,10 +343,9 @@ extension GameScene {
                 player.childNode(withName: (inventory[new-9].components(separatedBy: ",").first ?? "")+",bar,\(new+1)")?.removeFromParent()
                 inventory[new-9] = temp
             }
-            
-            //set moved item's label position
-            (player.childNode(withName: "label,\(token)") as? SKLabelNode)?.position = CGPoint(x: boxPos.x+32, y: boxPos.y-32)
         }
+        //set moved item's label position
+        (player.childNode(withName: "label,\(token)") as? SKLabelNode)?.position = CGPoint(x: boxPos.x+32, y: boxPos.y-32)
         
         //make sure hotbar and inventory show all items
         hotbar[0] = hotbar[0]

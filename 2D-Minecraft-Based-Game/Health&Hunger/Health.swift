@@ -115,33 +115,36 @@ extension GameScene {
         //checks if health was lost
         if damage > 0 {damagetaken()}
         
-        //if health is 0 empty inventory and hotbar, reset position, reset health, reset hunger
-        if health == 0 {
-            for i in 0..<hotbar.count {
-                let hotToken = hotbar[i].components(separatedBy: ",")
-                if hotbar[i] == "" {continue}
-                let num = labels[i]
-                for _ in 1...num {
-                    hotDrop(hotToken[0], dead: true)
-                    decLabel(hotToken, i)
-                }
+        //if health is 0 die
+        if health == 0 {die()}
+    }
+    
+    //empty inventory and hotbar, reset position, reset health, reset hunger
+    func die() {
+        for i in 0..<hotbar.count {
+            let hotToken = hotbar[i].components(separatedBy: ",")
+            if hotbar[i] == "" {continue}
+            let num = labels[i]
+            for _ in 1...num {
+                hotDrop(hotToken[0], dead: true)
+                decLabel(hotToken, i)
             }
-            for i in 0..<inventory.count {
-                let hotToken = inventory[i].components(separatedBy: ",")
-                if inventory[i] == "" {continue}
-                let num = labels[i+9]
-                for _ in 1...num {
-                    hotDrop(hotToken[0], dead: true)
-                    labels[i+9]-=1
-                }
-            }
-            player.position = startPos
-            health = 20
-            hungerLeft = 20
-            exhaustion = 20
-            saturation = 5
-            health(lost: 0)
-            hunger(eaten: 0, sat: 0)
         }
+        for i in 0..<inventory.count {
+            let hotToken = inventory[i].components(separatedBy: ",")
+            if inventory[i] == "" {continue}
+            let num = labels[i+9]
+            for _ in 1...num {
+                hotDrop(hotToken[0], dead: true)
+                labels[i+9]-=1
+            }
+        }
+        player.position = startPos
+        health = 20
+        hungerLeft = 20
+        exhaustion = 20
+        saturation = 5
+        health(lost: 0)
+        hunger(eaten: 0, sat: 0)
     }
 }

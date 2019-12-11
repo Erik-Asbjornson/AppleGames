@@ -198,23 +198,33 @@ extension GameScene {
     
     //creates trees
     func trees(_ x: Int,_ y: Int,_ noise: GKNoiseMap) {
+        
         var i = -1
         var biomeName = ""
         var dist = Int()
+        
         for col in 0..<blockscol {
+            
+            //distribution of trees and dead bushes
             if dist == 0 {
                 dist = [4,5,5,6,6,6,6,7,7,8].randomElement()!
                 if biomeName == "desert" {dist*=2}
             }
+            
+            //get next biome
             if col % biomeSize == 0 {
                 i+=1
                 biomeName = biome[i]
             }
+            
+            //check if forest or desert
             if !["forest", "desert"].contains(biomeName) {continue}
+            
+            //place tree or dead bush
             dist-=1
             if dist == 0 {
                 for row in blocksrow-128 ... blocksrow {
-                    if  blocksName[col][row+65] != "" {
+                    if  blocksName[col][row+(129-blocksrow)] != "" {
                         if biomeName == "desert" {addBlock(image: "Deadbush", x, y, row-1, col, 1, false)}
                         else {addTree(x,y,row-1,col)}
                         break

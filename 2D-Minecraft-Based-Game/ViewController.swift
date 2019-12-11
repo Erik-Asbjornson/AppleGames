@@ -19,6 +19,7 @@ class ViewController: NSViewController {
     let play = NSButton()
     let controls = NSButton()
     let quit = NSButton()
+    let backControls = NSButton()
     
     //initialize seed text field
     var seed = NSTextField(frame: NSRect(x: 150, y: 230, width: 500, height: 40))
@@ -52,8 +53,27 @@ class ViewController: NSViewController {
         gameScene.title.removeFromParent()
         gameScene.finePrint.removeFromParent()
         
+        //add button to get back to title screen
+        Button(button: backControls, position: NSPoint(x: 150, y: 180), size: NSSize(width: 245, height: 40), color: NSColor.gray, text: "Go Back", action: #selector(backPressed))
+        
         //show controls
         gameScene.showControls()
+    }
+    
+    @objc func backPressed(button:NSButton) {
+        
+        //add NSObjects back
+        for item in items {view.addSubview(item as! NSView)}
+        
+        //remove back button
+        backControls.removeFromSuperview()
+        
+        //remove controls text
+        gameScene.showControls()
+        
+        //add title and fineprint
+        gameScene.addChild(gameScene.title)
+        gameScene.addChild(gameScene.finePrint)
     }
     
     //exit game when quit button is pressed
@@ -76,8 +96,8 @@ class ViewController: NSViewController {
             //(800,600) is what the cordinates are based on
             //create buttons
             Button(button: play, position: NSPoint(x: 150, y: 280), size: NSSize(width: 500, height: 40), color: NSColor.gray, text: "Play Game", action: #selector(playPressed))
-            //Button(button: options, position: NSPoint(x: 150, y: 180), size: NSSize(width: 245, height: 40), color: NSColor.gray, text: "Options...", action: #selector(controlsPressed))
-            Button(button: quit, position: NSPoint(x: 150, y: 180), size: NSSize(width: 500, height: 40), color: NSColor.gray, text: "Quit Game", action: #selector(quitPressed))
+            Button(button: controls, position: NSPoint(x: 150, y: 180), size: NSSize(width: 245, height: 40), color: NSColor.gray, text: "Controls", action: #selector(controlsPressed))
+            Button(button: quit, position: NSPoint(x: 405, y: 180), size: NSSize(width: 245, height: 40), color: NSColor.gray, text: "Quit Game", action: #selector(quitPressed))
             
             //create textfield
             seed.font = NSFont(name: "minecraft", size: 20)

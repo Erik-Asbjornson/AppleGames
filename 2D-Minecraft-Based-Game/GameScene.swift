@@ -51,8 +51,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var biome = [String]()
     var startPos = CGPoint(x: 0, y: 120)
     let blockSize = 80
-    let blocksrow = 64
-    let blockscol = 128
+    let blocksrow = 32
+    let blockscol = 256
     let biomeSize = 64
     
     //initialize camera node
@@ -241,6 +241,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //if can jump
             if U {if abs(player.physicsBody!.velocity.dy) < 0.1 {jump()}}
+            
+            //if below lowest block die
+            if Int(player.position.y) < -80*blocksrow-80 {die()}
         }
     }
     

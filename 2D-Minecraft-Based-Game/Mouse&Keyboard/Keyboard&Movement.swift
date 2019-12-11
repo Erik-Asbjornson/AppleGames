@@ -17,8 +17,8 @@ extension GameScene {
         if !inGame {return}
         
         switch event.keyCode {
-        //case 0x31: //spacebar
-            //print("hello")
+        case 0x31: //spacebar
+            print("hello")
         case 0x7B: //left arrow
             
             //if left arrow not pressed
@@ -110,8 +110,8 @@ extension GameScene {
     
     override func keyUp(with event: NSEvent) {
         switch event.keyCode {
-        //case 0x31: // spacebar
-            //print("Bye")
+        case 0x31: // spacebar
+            print("Bye")
         case 0x7B: // left arrow
             L = false
         deltaTimeL = NSDate().timeIntervalSince1970
