@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4765115237E59FA00269FDB /* minecraft.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4765113237E59BC00269FDB /* minecraft.ttf */; };
+		C4765117237E5DC800269FDB /* WorldTerrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765116237E5DC800269FDB /* WorldTerrain.swift */; };
+		C4765119237E5EFB00269FDB /* WorldStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765118237E5EFB00269FDB /* WorldStart.swift */; };
+		C476511B237E5FD800269FDB /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476511A237E5FD800269FDB /* Health.swift */; };
+		C476511D237E600E00269FDB /* Hunger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476511C237E600E00269FDB /* Hunger.swift */; };
+		C476511F237E607400269FDB /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476511E237E607400269FDB /* Mouse.swift */; };
+		C4765121237E60A200269FDB /* Keyboard&Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765120237E60A200269FDB /* Keyboard&Movement.swift */; };
+		C4765126237F6E2400269FDB /* NSImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765125237F6E2400269FDB /* NSImage+extension.swift */; };
+		C4765129237F89BC00269FDB /* ViewControllerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765128237F89BC00269FDB /* ViewControllerFunctions.swift */; };
+		C476512B237FB14B00269FDB /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476512A237FB14B00269FDB /* Controls.swift */; };
+		C476512E237FC02800269FDB /* WorldSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476512D237FC02800269FDB /* WorldSettings.swift */; };
+		C47651302381C4D000269FDB /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476512F2381C4D000269FDB /* Inventory.swift */; };
+		C476513223842F4800269FDB /* Drops.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476513123842F4800269FDB /* Drops.swift */; };
+		C4DE2BDB23272E54004A175E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE2BDA23272E54004A175E /* AppDelegate.swift */; };
+		C4DE2BE123272E54004A175E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE2BE023272E54004A175E /* GameScene.swift */; };
+		C4DE2BE323272E54004A175E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE2BE223272E54004A175E /* ViewController.swift */; };
+		C4DE2BE523272E55004A175E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4DE2BE423272E55004A175E /* Assets.xcassets */; };
+		C4DE2BE823272E55004A175E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DE2BE623272E55004A175E /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4DE2BF023272E55004A175E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4DE2BCF23272E54004A175E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4DE2BD623272E54004A175E;
+			remoteInfo = meincraft;
+		};
+		C4DE2BFB23272E55004A175E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4DE2BCF23272E54004A175E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4DE2BD623272E54004A175E;
+			remoteInfo = meincraft;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C4765114237E59E600269FDB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				C4765115237E59FA00269FDB /* minecraft.ttf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C4765113237E59BC00269FDB /* minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = minecraft.ttf; sourceTree = "<group>"; };
+		C4765116237E5DC800269FDB /* WorldTerrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTerrain.swift; sourceTree = "<group>"; };
+		C4765118237E5EFB00269FDB /* WorldStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldStart.swift; sourceTree = "<group>"; };
+		C476511A237E5FD800269FDB /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
+		C476511C237E600E00269FDB /* Hunger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunger.swift; sourceTree = "<group>"; };
+		C476511E237E607400269FDB /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
+		C4765120237E60A200269FDB /* Keyboard&Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard&Movement.swift"; sourceTree = "<group>"; };
+		C4765125237F6E2400269FDB /* NSImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+extension.swift"; sourceTree = "<group>"; };
+		C4765128237F89BC00269FDB /* ViewControllerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFunctions.swift; sourceTree = "<group>"; };
+		C476512A237FB14B00269FDB /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
+		C476512D237FC02800269FDB /* WorldSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldSettings.swift; sourceTree = "<group>"; };
+		C476512F2381C4D000269FDB /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		C476513123842F4800269FDB /* Drops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drops.swift; sourceTree = "<group>"; };
+		C4DE2BD723272E54004A175E /* 2D-Minecraft-Based-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2D-Minecraft-Based-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4DE2BDA23272E54004A175E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4DE2BE023272E54004A175E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C4DE2BE223272E54004A175E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4DE2BE423272E55004A175E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4DE2BE723272E55004A175E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4DE2BE923272E55004A175E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4DE2BEA23272E55004A175E /* 2D-Minecraft-Based-Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "2D-Minecraft-Based-Game.entitlements"; sourceTree = "<group>"; };
+		C4DE2BEF23272E55004A175E /* 2D-Minecraft-Based-GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2D-Minecraft-Based-GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4DE2BFA23272E55004A175E /* 2D-Minecraft-Based-GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2D-Minecraft-Based-GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4DE2BD423272E54004A175E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DE2BEC23272E55004A175E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DE2BF723272E55004A175E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4765112237E599400269FDB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C4765113237E59BC00269FDB /* minecraft.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C4765122237E614300269FDB /* Health&Hunger */ = {
+			isa = PBXGroup;
+			children = (
+				C476511A237E5FD800269FDB /* Health.swift */,
+				C476511C237E600E00269FDB /* Hunger.swift */,
+			);
+			path = "Health&Hunger";
+			sourceTree = "<group>";
+		};
+		C4765123237E616C00269FDB /* Mouse&Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C476511E237E607400269FDB /* Mouse.swift */,
+				C4765120237E60A200269FDB /* Keyboard&Movement.swift */,
+			);
+			path = "Mouse&Keyboard";
+			sourceTree = "<group>";
+		};
+		C4765124237E619800269FDB /* World */ = {
+			isa = PBXGroup;
+			children = (
+				C4765116237E5DC800269FDB /* WorldTerrain.swift */,
+				C4765118237E5EFB00269FDB /* WorldStart.swift */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		C4765127237F6E2800269FDB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4765125237F6E2400269FDB /* NSImage+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C476512C237FB14E00269FDB /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				C476512A237FB14B00269FDB /* Controls.swift */,
+				C476512F2381C4D000269FDB /* Inventory.swift */,
+				C476512D237FC02800269FDB /* WorldSettings.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+		C4DE2BCE23272E54004A175E = {
+			isa = PBXGroup;
+			children = (
+				C4DE2BD923272E54004A175E /* 2D-Minecraft-Based-Game */,
+				C4DE2BD823272E54004A175E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4DE2BD823272E54004A175E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4DE2BD723272E54004A175E /* 2D-Minecraft-Based-Game.app */,
+				C4DE2BEF23272E55004A175E /* 2D-Minecraft-Based-GameTests.xctest */,
+				C4DE2BFA23272E55004A175E /* 2D-Minecraft-Based-GameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4DE2BD923272E54004A175E /* 2D-Minecraft-Based-Game */ = {
+			isa = PBXGroup;
+			children = (
+				C4DE2BDA23272E54004A175E /* AppDelegate.swift */,
+				C4DE2BE023272E54004A175E /* GameScene.swift */,
+				C476513123842F4800269FDB /* Drops.swift */,
+				C4765124237E619800269FDB /* World */,
+				C4765122237E614300269FDB /* Health&Hunger */,
+				C4765123237E616C00269FDB /* Mouse&Keyboard */,
+				C4DE2BE223272E54004A175E /* ViewController.swift */,
+				C476512C237FB14E00269FDB /* Menus */,
+				C4765128237F89BC00269FDB /* ViewControllerFunctions.swift */,
+				C4765127237F6E2800269FDB /* Extensions */,
+				C4DE2BE423272E55004A175E /* Assets.xcassets */,
+				C4DE2BE623272E55004A175E /* Main.storyboard */,
+				C4DE2BE923272E55004A175E /* Info.plist */,
+				C4DE2BEA23272E55004A175E /* 2D-Minecraft-Based-Game.entitlements */,
+				C4765112237E599400269FDB /* Fonts */,
+			);
+			path = "2D-Minecraft-Based-Game";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4DE2BD623272E54004A175E /* 2D-Minecraft-Based-Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4DE2C0323272E55004A175E /* Build configuration list for PBXNativeTarget "2D-Minecraft-Based-Game" */;
+			buildPhases = (
+				C4DE2BD323272E54004A175E /* Sources */,
+				C4DE2BD423272E54004A175E /* Frameworks */,
+				C4DE2BD523272E54004A175E /* Resources */,
+				C4765114237E59E600269FDB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "2D-Minecraft-Based-Game";
+			productName = meincraft;
+			productReference = C4DE2BD723272E54004A175E /* 2D-Minecraft-Based-Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4DE2BEE23272E55004A175E /* 2D-Minecraft-Based-GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4DE2C0623272E55004A175E /* Build configuration list for PBXNativeTarget "2D-Minecraft-Based-GameTests" */;
+			buildPhases = (
+				C4DE2BEB23272E55004A175E /* Sources */,
+				C4DE2BEC23272E55004A175E /* Frameworks */,
+				C4DE2BED23272E55004A175E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4DE2BF123272E55004A175E /* PBXTargetDependency */,
+			);
+			name = "2D-Minecraft-Based-GameTests";
+			productName = meincraftTests;
+			productReference = C4DE2BEF23272E55004A175E /* 2D-Minecraft-Based-GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4DE2BF923272E55004A175E /* 2D-Minecraft-Based-GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4DE2C0923272E55004A175E /* Build configuration list for PBXNativeTarget "2D-Minecraft-Based-GameUITests" */;
+			buildPhases = (
+				C4DE2BF623272E55004A175E /* Sources */,
+				C4DE2BF723272E55004A175E /* Frameworks */,
+				C4DE2BF823272E55004A175E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4DE2BFC23272E55004A175E /* PBXTargetDependency */,
+			);
+			name = "2D-Minecraft-Based-GameUITests";
+			productName = meincraftUITests;
+			productReference = C4DE2BFA23272E55004A175E /* 2D-Minecraft-Based-GameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4DE2BCF23272E54004A175E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Erik Asbjornson";
+				TargetAttributes = {
+					C4DE2BD623272E54004A175E = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					C4DE2BEE23272E55004A175E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C4DE2BD623272E54004A175E;
+					};
+					C4DE2BF923272E55004A175E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C4DE2BD623272E54004A175E;
+					};
+				};
+			};
+			buildConfigurationList = C4DE2BD223272E54004A175E /* Build configuration list for PBXProject "2D-Minecraft-Based-Game" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4DE2BCE23272E54004A175E;
+			productRefGroup = C4DE2BD823272E54004A175E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4DE2BD623272E54004A175E /* 2D-Minecraft-Based-Game */,
+				C4DE2BEE23272E55004A175E /* 2D-Minecraft-Based-GameTests */,
+				C4DE2BF923272E55004A175E /* 2D-Minecraft-Based-GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4DE2BD523272E54004A175E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4DE2BE523272E55004A175E /* Assets.xcassets in Resources */,
+				C4DE2BE823272E55004A175E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DE2BED23272E55004A175E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DE2BF823272E55004A175E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4DE2BD323272E54004A175E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4765126237F6E2400269FDB /* NSImage+extension.swift in Sources */,
+				C4DE2BE323272E54004A175E /* ViewController.swift in Sources */,
+				C47651302381C4D000269FDB /* Inventory.swift in Sources */,
+				C476511B237E5FD800269FDB /* Health.swift in Sources */,
+				C4765117237E5DC800269FDB /* WorldTerrain.swift in Sources */,
+				C476512B237FB14B00269FDB /* Controls.swift in Sources */,
+				C4DE2BE123272E54004A175E /* GameScene.swift in Sources */,
+				C4765129237F89BC00269FDB /* ViewControllerFunctions.swift in Sources */,
+				C4765121237E60A200269FDB /* Keyboard&Movement.swift in Sources */,
+				C476511D237E600E00269FDB /* Hunger.swift in Sources */,
+				C476512E237FC02800269FDB /* WorldSettings.swift in Sources */,
+				C4765119237E5EFB00269FDB /* WorldStart.swift in Sources */,
+				C4DE2BDB23272E54004A175E /* AppDelegate.swift in Sources */,
+				C476511F237E607400269FDB /* Mouse.swift in Sources */,
+				C476513223842F4800269FDB /* Drops.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DE2BEB23272E55004A175E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DE2BF623272E55004A175E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4DE2BF123272E55004A175E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4DE2BD623272E54004A175E /* 2D-Minecraft-Based-Game */;
+			targetProxy = C4DE2BF023272E55004A175E /* PBXContainerItemProxy */;
+		};
+		C4DE2BFC23272E55004A175E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4DE2BD623272E54004A175E /* 2D-Minecraft-Based-Game */;
+			targetProxy = C4DE2BFB23272E55004A175E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4DE2BE623272E55004A175E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4DE2BE723272E55004A175E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4DE2C0123272E55004A175E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C4DE2C0223272E55004A175E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C4DE2C0423272E55004A175E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "2D-Minecraft-Based-Game/2D-Minecraft-Based-Game.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C5BQLT2RS;
+				INFOPLIST_FILE = "$(SRCROOT)/2D-Minecraft-Based-Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asbjornson.helloworld.2D-Minecraft-Based-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C4DE2C0523272E55004A175E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "2D-Minecraft-Based-Game/2D-Minecraft-Based-Game.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C5BQLT2RS;
+				INFOPLIST_FILE = "$(SRCROOT)/2D-Minecraft-Based-Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asbjornson.helloworld.2D-Minecraft-Based-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C4DE2C0723272E55004A175E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C5BQLT2RS;
+				INFOPLIST_FILE = meincraftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asbjornson.helloworld.meincraftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2D-Minecraft-Based-Game.app/Contents/MacOS/2D-Minecraft-Based-Game";
+			};
+			name = Debug;
+		};
+		C4DE2C0823272E55004A175E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C5BQLT2RS;
+				INFOPLIST_FILE = meincraftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asbjornson.helloworld.meincraftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2D-Minecraft-Based-Game.app/Contents/MacOS/2D-Minecraft-Based-Game";
+			};
+			name = Release;
+		};
+		C4DE2C0A23272E55004A175E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C5BQLT2RS;
+				INFOPLIST_FILE = meincraftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asbjornson.helloworld.meincraftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = meincraft;
+			};
+			name = Debug;
+		};
+		C4DE2C0B23272E55004A175E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C5BQLT2RS;
+				INFOPLIST_FILE = meincraftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.asbjornson.helloworld.meincraftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = meincraft;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4DE2BD223272E54004A175E /* Build configuration list for PBXProject "2D-Minecraft-Based-Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4DE2C0123272E55004A175E /* Debug */,
+				C4DE2C0223272E55004A175E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4DE2C0323272E55004A175E /* Build configuration list for PBXNativeTarget "2D-Minecraft-Based-Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4DE2C0423272E55004A175E /* Debug */,
+				C4DE2C0523272E55004A175E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4DE2C0623272E55004A175E /* Build configuration list for PBXNativeTarget "2D-Minecraft-Based-GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4DE2C0723272E55004A175E /* Debug */,
+				C4DE2C0823272E55004A175E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4DE2C0923272E55004A175E /* Build configuration list for PBXNativeTarget "2D-Minecraft-Based-GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4DE2C0A23272E55004A175E /* Debug */,
+				C4DE2C0B23272E55004A175E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4DE2BCF23272E54004A175E /* Project object */;
+}
