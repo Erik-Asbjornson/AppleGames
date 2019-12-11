@@ -1,4 +1,6 @@
 # AppleGames
+The 
+
 The seed only affects terrain nothing else.
 
 The controls are arrow keys for left, right, and jump.
