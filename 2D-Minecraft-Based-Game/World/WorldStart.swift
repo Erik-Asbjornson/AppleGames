@@ -43,6 +43,9 @@ extension GameScene {
         //add camera node
         player.addChild(cameraNode)
         scene?.camera = cameraNode
+        
+        //add music
+        addChild(music)
     }
     
     //creates hotbar

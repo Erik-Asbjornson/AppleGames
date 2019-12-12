@@ -9,11 +9,32 @@
 import Cocoa
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class ViewController: NSViewController {
     
     //make it so gamescene objects can be used
     var gameScene = GameScene()
+    
+    var arrPlayer = [AVAudioPlayer]()
+    let url = Bundle.main.url(forResource: "button", withExtension: "wav")!
+    
+    func playSound() {
+        do
+        {
+            let player = try AVAudioPlayer(contentsOf: url)
+            
+            arrPlayer.append(player)
+            
+            arrPlayer.last?.prepareToPlay()
+            arrPlayer.last?.play()
+        }
+            
+        catch let error
+        {
+            print(error.localizedDescription)
+        }
+    }
     
     //initialize buttons
     let play = NSButton()
@@ -30,6 +51,7 @@ class ViewController: NSViewController {
     @IBOutlet var skView: SKView!
     
     @objc func playPressed(button:NSButton) {
+        playSound()
         
         //remove NSObjects
         for item in items {item.removeFromSuperview()}
@@ -45,6 +67,7 @@ class ViewController: NSViewController {
     }
     
     @objc func controlsPressed(button:NSButton) {
+        playSound()
         
         //remove NSObjects
         for item in items {item.removeFromSuperview()}
@@ -61,6 +84,7 @@ class ViewController: NSViewController {
     }
     
     @objc func backPressed(button:NSButton) {
+        playSound()
         
         //add NSObjects back
         for item in items {view.addSubview(item as! NSView)}

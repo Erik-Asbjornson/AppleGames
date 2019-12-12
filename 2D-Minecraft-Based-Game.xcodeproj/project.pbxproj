@@ -20,6 +20,11 @@
 		C476512E237FC02800269FDB /* WorldSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476512D237FC02800269FDB /* WorldSettings.swift */; };
 		C47651302381C4D000269FDB /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476512F2381C4D000269FDB /* Inventory.swift */; };
 		C476513223842F4800269FDB /* Drops.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476513123842F4800269FDB /* Drops.swift */; };
+		C4827A8D23A1AF6B0050F218 /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4827A8C23A1AF6B0050F218 /* button.wav */; };
+		C4827A9123A1E4100050F218 /* hitting.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4827A9023A1E4100050F218 /* hitting.m4a */; };
+		C4827A9A23A1F5F30050F218 /* walking.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4827A9823A1F5F30050F218 /* walking.m4a */; };
+		C4827A9B23A1F5F30050F218 /* fell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4827A9923A1F5F30050F218 /* fell.m4a */; };
+		C4827A9D23A1FA0A0050F218 /* StarsProds-Minecraft Song.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4827A9C23A1FA0A0050F218 /* StarsProds-Minecraft Song.wav */; };
 		C4DE2BDB23272E54004A175E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE2BDA23272E54004A175E /* AppDelegate.swift */; };
 		C4DE2BE123272E54004A175E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE2BE023272E54004A175E /* GameScene.swift */; };
 		C4DE2BE323272E54004A175E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE2BE223272E54004A175E /* ViewController.swift */; };
@@ -71,6 +76,11 @@
 		C476512D237FC02800269FDB /* WorldSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldSettings.swift; sourceTree = "<group>"; };
 		C476512F2381C4D000269FDB /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		C476513123842F4800269FDB /* Drops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drops.swift; sourceTree = "<group>"; };
+		C4827A8C23A1AF6B0050F218 /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
+		C4827A9023A1E4100050F218 /* hitting.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hitting.m4a; sourceTree = "<group>"; };
+		C4827A9823A1F5F30050F218 /* walking.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = walking.m4a; sourceTree = "<group>"; };
+		C4827A9923A1F5F30050F218 /* fell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fell.m4a; sourceTree = "<group>"; };
+		C4827A9C23A1FA0A0050F218 /* StarsProds-Minecraft Song.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "StarsProds-Minecraft Song.wav"; sourceTree = "<group>"; };
 		C4DE2BD723272E54004A175E /* 2D-Minecraft-Based-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2D-Minecraft-Based-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DE2BDA23272E54004A175E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DE2BE023272E54004A175E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -161,6 +171,18 @@
 			path = Menus;
 			sourceTree = "<group>";
 		};
+		C4827A8B23A1AF3B0050F218 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				C4827A8C23A1AF6B0050F218 /* button.wav */,
+				C4827A9023A1E4100050F218 /* hitting.m4a */,
+				C4827A9923A1F5F30050F218 /* fell.m4a */,
+				C4827A9823A1F5F30050F218 /* walking.m4a */,
+				C4827A9C23A1FA0A0050F218 /* StarsProds-Minecraft Song.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		C4DE2BCE23272E54004A175E = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +207,7 @@
 				C4DE2BDA23272E54004A175E /* AppDelegate.swift */,
 				C4DE2BE023272E54004A175E /* GameScene.swift */,
 				C476513123842F4800269FDB /* Drops.swift */,
+				C4827A8B23A1AF3B0050F218 /* Sound */,
 				C4765124237E619800269FDB /* World */,
 				C4765122237E614300269FDB /* Health&Hunger */,
 				C4765123237E616C00269FDB /* Mouse&Keyboard */,
@@ -306,8 +329,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4827A9A23A1F5F30050F218 /* walking.m4a in Resources */,
+				C4827A9B23A1F5F30050F218 /* fell.m4a in Resources */,
+				C4827A9123A1E4100050F218 /* hitting.m4a in Resources */,
 				C4DE2BE523272E55004A175E /* Assets.xcassets in Resources */,
 				C4DE2BE823272E55004A175E /* Main.storyboard in Resources */,
+				C4827A9D23A1FA0A0050F218 /* StarsProds-Minecraft Song.wav in Resources */,
+				C4827A8D23A1AF6B0050F218 /* button.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

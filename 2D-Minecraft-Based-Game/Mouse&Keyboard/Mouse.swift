@@ -26,6 +26,11 @@ extension GameScene {
                 let token = filter.first?.name?.components(separatedBy: ",")
                 if token?.last == "drop" {return}
                 
+                //play sound until stopped
+                hittingSound.prepareToPlay()
+                hittingSound.numberOfLoops = -1
+                hittingSound.play()
+                
                 //adds Break sprite to view
                 Break.position = filter.first!.position
                 Break.zPosition = 4
@@ -48,7 +53,8 @@ extension GameScene {
         let check = nodes(at: pos).filter(){$0 != Break}
         if tappedNodes != check {
             
-            //if new nodes remove Break sprite and timer
+            //if new nodes remove Break sprite, timer, and sound
+            hittingSound.stop()
             tappedNodes = nodes(at: pos)
             mouseTimer?.invalidate()
             mouseTimer = nil
@@ -69,6 +75,11 @@ extension GameScene {
                         return
                     }
                     
+                    //play sound until stopped
+                    hittingSound.prepareToPlay()
+                    hittingSound.numberOfLoops = -1
+                    hittingSound.play()
+                    
                     //adds Break sprite to view
                     Break.texture = SKTexture(imageNamed: "Break\(broken)")
                     Break.position = filter.first!.position
@@ -83,7 +94,8 @@ extension GameScene {
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        //ends timer and removes/resets Break sprite
+        //ends timer, stops sound, and removes/resets Break sprite
+        hittingSound.stop()
         tappedNodes.removeAll()
         mouseTimer?.invalidate()
         mouseTimer = nil
@@ -101,6 +113,7 @@ extension GameScene {
             Break.texture = SKTexture(imageNamed: "Break\(broken)")
             return
         }
+        hittingSound.stop()
         broken=0
         Break.removeFromParent()
         

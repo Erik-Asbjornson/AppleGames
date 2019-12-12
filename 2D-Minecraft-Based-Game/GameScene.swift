@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
      
@@ -26,6 +27,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    //sounds
+    let music = SKAudioNode(fileNamed: "StarsProds-Minecraft Song.wav")
+    let hittingSound = try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "hitting", withExtension: "m4a")!)
+    let walkingSound = try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "walking", withExtension: "m4a")!)
+    let fellSound = try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource: "fell", withExtension: "m4a")!)
+        
     //initialize seed for noise map and player sprite
     var seed = Int32.random(in: -2147483648...2147483647)
     var player = SKSpriteNode(imageNamed: "steveRight")
@@ -232,7 +239,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //fall distance
             if fallStart != nil && abs(player.physicsBody!.velocity.dy) < 0.1 {
                 let dist = floor((fallStart! - player.position.y)/CGFloat(blockSize))-3
-                if dist > 0 {health(lost: Int(dist))}
+                if dist > 0 {
+                    fellSound.prepareToPlay()
+                    fellSound.play()
+                    health(lost: Int(dist))
+                }
                 fallStart = nil
             }
             
@@ -240,7 +251,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             checkHunger()
             
             //if can jump
-            if U {if abs(player.physicsBody!.velocity.dy) < 0.1 {jump()}}
+            if U {
+                if abs(player.physicsBody!.velocity.dy) < 0.1 {jump()}
+                if walkingSound.isPlaying {walkingSound.stop()}
+            }
             
             //if below lowest block die
             if Int(player.position.y) < -80*blocksrow-80 {die()}

@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 extension GameScene {
     
@@ -142,6 +143,11 @@ extension GameScene {
         
         // if running into a block stop sprinting
         if blocked {sprintingEnd()} else {
+            if !U && !walkingSound.isPlaying {
+                walkingSound.prepareToPlay()
+                walkingSound.numberOfLoops = -1
+                walkingSound.play()
+            }
             if sprinting {
                 sprintDistance+=abs(dist)
                 if Int(sprintDistance) >= blockSize {
@@ -153,11 +159,13 @@ extension GameScene {
     }
     
     func endMoveL() {
+        walkingSound.stop()
         runTimerL?.invalidate()
         runTimerL = nil
     }
     
     func endMoveR() {
+        walkingSound.stop()
         runTimerR?.invalidate()
         runTimerR = nil
     }
