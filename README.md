@@ -13,4 +13,6 @@ You use the left mouse button to break blocks, and you use the right mouse butto
 
 The e key opens inventory and the q key throws the selected hotbar item out of your hotbar.
 
-music is from https://mega.nz/#!FcVSQRwZ!uVVjmov8rQaWtATpapx5mF2pdj5GvV3-s40EK33pATQ.
+Music is from https://mega.nz/#!FcVSQRwZ!uVVjmov8rQaWtATpapx5mF2pdj5GvV3-s40EK33pATQ.
+
+Other sounds made by me.
