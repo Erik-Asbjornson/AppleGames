@@ -136,7 +136,7 @@ extension GameScene {
             let num = labels[i+9]
             for _ in 1...num {
                 hotDrop(hotToken[0], dead: true)
-                labels[i+9]-=1
+                decLabel(hotToken, i+9)
             }
         }
         player.position = startPos
